@@ -13,8 +13,10 @@ export function IfElse({
   fallbackClassName,
 }: IfElseProps) {
   return (
+    // @ts-ignore
     <AnimatePresence key={JSON.stringify(condition)} mode="wait">
       {condition && (
+        // @ts-ignore
         <motion.div
           className={cn(className)}
           initial={{ opacity: 0 }}
@@ -25,6 +27,7 @@ export function IfElse({
         </motion.div>
       )}
       {!condition && (
+        // @ts-ignore
         <motion.div
           className={cn(fallbackClassName)}
           initial={{ opacity: 0 }}

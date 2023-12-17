@@ -25,7 +25,7 @@
     "check-types": "tsc --noEmit"
   },
   "peerDependencies": {
-    "framer-motion": ">=4.0.0",
+    "framer-motion": ">=10.0.0",
     "react": ">=18",
     "react-dom": ">=18"
   },
