@@ -5,6 +5,7 @@
   "compilerOptions": {
     "lib": ["DOM"],
     "target": "ES6",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
