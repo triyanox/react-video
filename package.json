@@ -1,0 +1,23 @@
+{
+  "name": "react-video",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "rimraf packages/*/dist && rimraf packages/*/.turbo && rimraf **/**/node_modules rimraf **/**/package-lock.json rimraf **/**/.next rimraf **/**/.cache"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "prettier": "^3.1.0",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.5"
+  }
+}
