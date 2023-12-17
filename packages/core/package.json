@@ -22,7 +22,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -59,6 +60,9 @@
   },
   "bugs": {
     "url": "https://github.com/triyanox/react-video/issues"
+  },
+  "resolutions": {
+    "@types/react": "^18.0.0"
   },
   "keywords": [
     "react",
