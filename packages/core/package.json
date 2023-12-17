@@ -22,17 +22,17 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check-types": "tsc --noEmit",
-    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions --unsafe-perm"
+    "check-types": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=4.0.0"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slider": "^1.1.2",
     "clsx": "^2.0.0",
-    "framer-motion": "^10.16.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "^2.1.0",
@@ -50,7 +50,8 @@
     "react": "^18.2.0",
     "tailwindcss": "^3.3.6",
     "tsup": "^8.0.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "framer-motion": "^10.16.16"
   },
   "author": "Mohamed Achaq <hi@achaq.dev>",
   "homepage": "https://react-video.achaq.dev",
@@ -60,9 +61,6 @@
   },
   "bugs": {
     "url": "https://github.com/triyanox/react-video/issues"
-  },
-  "resolutions": {
-    "@types/react": "^17.0.38"
   },
   "keywords": [
     "react",
