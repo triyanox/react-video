@@ -8,7 +8,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "turbo run build && changeset publish",
     "version-packages": "changeset version",
-    "preinstall": "turbo run preinstall --filter @triyanox/react-video --unsafe-perm",
     "clean": "rimraf packages/*/dist && rimraf packages/*/.turbo && rimraf **/**/node_modules rimraf **/**/package-lock.json rimraf **/**/.next rimraf **/**/.cache"
   },
   "devDependencies": {
