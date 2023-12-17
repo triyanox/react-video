@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v2
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Setup pnpm
         run: npm install -g pnpm
@@ -32,8 +32,8 @@ jobs:
         with:
           publish: pnpm release
           version: pnpm version-packages
-          commit: 'chore: update package versions'
-          title: 'chore: update package versions'
+          commit: "chore: update package versions"
+          title: "chore: update package versions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
