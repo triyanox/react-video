@@ -23,6 +23,7 @@ function Button({
   };
 
   return (
+    // @ts-ignore
     <motion.button
       onClick={handleClick}
       className={cn(
