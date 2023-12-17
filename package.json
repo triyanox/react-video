@@ -14,7 +14,8 @@
     "@changesets/cli": "^2.27.1",
     "@repo/eslint-config": "workspace:*",
     "prettier": "^3.1.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@repo/typescript-config": "workspace:*"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
