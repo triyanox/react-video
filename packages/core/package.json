@@ -23,7 +23,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "check-types": "tsc --noEmit",
-    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions"
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions --unsafe-perm"
   },
   "peerDependencies": {
     "react": "^18.2.0"
