@@ -6,6 +6,7 @@ export default defineConfig((options: Options) => ({
     js: "'use client'",
   },
   format: ["cjs", "esm"],
+  dts: true,
   clean: true,
   minify: true,
   external: ["react", "react-dom", "framer-motion"],
