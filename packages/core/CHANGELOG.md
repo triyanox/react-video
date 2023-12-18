@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.3
+
+### Patch Changes
+
+- c4a2d4f: Fix framer-motion declarations problem
+
 ## 0.1.2
 
 ### Patch Changes
