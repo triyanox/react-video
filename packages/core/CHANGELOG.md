@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.4
+
+### Patch Changes
+
+- 05f3361: Hide fullscreen when pip
+
 ## 0.1.3
 
 ### Patch Changes
