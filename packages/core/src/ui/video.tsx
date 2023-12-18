@@ -219,25 +219,27 @@ function Video({
             )}
           >
             <div className="w-full flex">
-              <Button
-                size="lg"
-                radius="full"
-                className="bg-transparent z-50"
-                onClick={() => {
-                  if (isFullscreen) {
-                    handleExitFullScreen();
-                  } else {
-                    handleFullScreen();
-                  }
-                }}
-              >
-                <IfElse
-                  fallback={<_icons.fullScreen />}
-                  condition={isFullscreen}
+              <If condition={!isPip}>
+                <Button
+                  size="lg"
+                  radius="full"
+                  className="bg-transparent z-50"
+                  onClick={() => {
+                    if (isFullscreen) {
+                      handleExitFullScreen();
+                    } else {
+                      handleFullScreen();
+                    }
+                  }}
                 >
-                  <_icons.exitFullScreen />
-                </IfElse>
-              </Button>
+                  <IfElse
+                    fallback={<_icons.fullScreen />}
+                    condition={isFullscreen}
+                  >
+                    <_icons.exitFullScreen />
+                  </IfElse>
+                </Button>
+              </If>
               <If condition={!isFullscreen}>
                 <Button
                   size="lg"
