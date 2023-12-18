@@ -147,13 +147,6 @@ function Video({
         className,
         classNames?.base
       )}
-      onDoubleClick={() => {
-        if (isFullscreen) {
-          handleExitFullScreen();
-        } else {
-          handleFullScreen();
-        }
-      }}
     >
       <video
         crossOrigin="anonymous"
