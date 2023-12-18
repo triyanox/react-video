@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.5
+
+### Patch Changes
+
+- 229fb29: Remove double click to full screen
+
 ## 0.1.4
 
 ### Patch Changes
