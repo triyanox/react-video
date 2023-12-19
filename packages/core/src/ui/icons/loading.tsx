@@ -1,6 +1,6 @@
 const Loading = () => (
   <svg
-    className="fill-white animate-spin w-6 h-6"
+    className="rv-fill-white rv-animate-spin rv-w-6 rv-h-6"
     strokeWidth="0"
     viewBox="0 0 1024 1024"
     xmlns="http://www.w3.org/2000/svg"

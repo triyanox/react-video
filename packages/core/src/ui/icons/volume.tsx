@@ -21,7 +21,7 @@ const Volume = ({ volume, isMuted }: { volume: number; isMuted: boolean }) => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 fill-white"
+      className="rv-w-6 rv-h-6 rv-fill-white"
       viewBox="0 0 512 512"
       key={JSON.stringify(isMuted)}
       animate={{ opacity: isMuted ? 0.5 : 1, x: isMuted ? 5 : 0 }}
