@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.7
+
+### Patch Changes
+
+- 513fcd6: Fix onKeyDown issues
+
 ## 0.1.6
 
 ### Patch Changes
