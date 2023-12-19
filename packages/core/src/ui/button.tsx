@@ -32,16 +32,16 @@ function Button({
     <motion.button
       onClick={handleClick}
       className={cn(
-        "flex justify-center items-center",
+        "rv-flex rv-justify-center rv-items-center",
         {
-          "w-8 h-8": size === "sm",
-          "w-10 h-10": size === "md",
-          "w-12 h-12": size === "lg",
-          "rounded-none": radius === "none",
-          "rounded-sm": radius === "sm",
-          "rounded-md": radius === "md",
-          "rounded-lg": radius === "lg",
-          "rounded-full": radius === "full",
+          "rv-w-8 rv-h-8": size === "sm",
+          "rv-w-10 rv-h-10": size === "md",
+          "rv-w-12 rv-h-12": size === "lg",
+          "rv-rounded-none": radius === "none",
+          "rv-rounded-sm": radius === "sm",
+          "rv-rounded-md": radius === "md",
+          "rv-rounded-lg": radius === "lg",
+          "rv-rounded-full": radius === "full",
         },
         className
       )}

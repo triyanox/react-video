@@ -142,8 +142,8 @@ function Video({
     <div
       ref={wrapperRef}
       className={cn(
-        "relative aspect-video",
-        isLoaded ? "block" : "hidden",
+        "rv-relative rv-aspect-video",
+        isLoaded ? "rv-block" : "rv-hidden",
         className,
         classNames?.base
       )}
@@ -156,10 +156,10 @@ function Video({
         loop={loop}
         className={cn(
           {
-            "rounded-xl": !isFullscreen,
+            "rv-rounded-xl": !isFullscreen,
           },
           {
-            "h-full w-full": FullScreen,
+            "rv-h-full rv-w-full": FullScreen,
           },
           classNames?.video
         )}
@@ -187,8 +187,8 @@ function Video({
             ease: "easeInOut",
           }}
           className={cn(
-            "absolute inset-0 bg-gradient-to-t from-black via-transparent to-black",
-            { "rounded-xl": !isFullscreen },
+            "rv-absolute rv-inset-0 rv-bg-gradient-to-t rv-from-black rv-via-transparent rv-to-black",
+            { "rv-rounded-xl": !isFullscreen },
             classNames?.backdrop
           )}
         />
@@ -207,16 +207,16 @@ function Video({
               ease: "easeInOut",
             }}
             className={cn(
-              "absolute inset-0 flex justify-between px-4 h-fit xl:px-8 gap-2 xl:gap-2 py-3 top-0",
+              "rv-absolute rv-inset-0 rv-flex rv-justify-between rv-px-4 rv-h-fit xl:rv-px-8 rv-gap-2 xl:rv-gap-2 rv-py-3 rv-top-0",
               classNames?.topWrapper
             )}
           >
-            <div className="w-full flex">
+            <div className="rv-w-full rv-flex">
               <If condition={!isPip}>
                 <Button
                   size="lg"
                   radius="full"
-                  className="bg-transparent z-50"
+                  className="rv-bg-transparent rv-z-50"
                   onClick={() => {
                     if (isFullscreen) {
                       handleExitFullScreen();
@@ -237,7 +237,7 @@ function Video({
                 <Button
                   size="lg"
                   radius="full"
-                  className="bg-transparent z-50"
+                  className="rv-bg-transparent rv-z-50"
                   onClick={() => {
                     if (isPip) {
                       handleExitPip();
@@ -252,11 +252,11 @@ function Video({
                 </Button>
               </If>
             </div>
-            <div className="w-full flex justify-end items-center h-fit">
+            <div className="rv-w-full rv-flex rv-justify-end rv-items-center rv-h-fit">
               <Button
                 size="lg"
                 radius="full"
-                className="bg-transparent z-50"
+                className="rv-bg-transparent rv-z-50"
                 onClick={() => {
                   if (isMuted) {
                     handleUnmute();
@@ -269,7 +269,7 @@ function Video({
               </Button>
               <RadixSlider.Root
                 className={cn(
-                  "relative z-50 items-center select-none touch-none w-full h-5 hidden lg:flex lg:w-1/4",
+                  "rv-relative rv-z-50 rv-items-center rv-select-none rv-touch-none rv-w-full rv-h-5 rv-hidden lg:rv-flex lg:rv-w-1/4",
                   classNames?.volumeSlider?.root
                 )}
                 onValueChange={(value) => {
@@ -282,13 +282,13 @@ function Video({
               >
                 <RadixSlider.Track
                   className={cn(
-                    "bg-white backdrop-filter overflow-hidden backdrop-blur-sm h-3 bg-opacity-20 relative grow rounded-full",
+                    "rv-bg-white rv-backdrop-filter rv-overflow-hidden rv-backdrop-blur-sm rv-h-3 rv-bg-opacity-20 rv-relative rv-grow rv-rounded-full",
                     classNames?.volumeSlider?.track
                   )}
                 >
                   <RadixSlider.Range
                     className={cn(
-                      "absolute bg-white rounded-full h-full",
+                      "rv-absolute rv-bg-white rv-rounded-full rv-h-full",
                       classNames?.volumeSlider?.range
                     )}
                   />
@@ -296,7 +296,7 @@ function Video({
                 <If condition={!hideSliderThumb}>
                   <RadixSlider.Thumb
                     className={cn(
-                      "block w-5 h-5 bg-white shadow-[0_2px_2px] shadow-black rounded-[10px] hover:bg-white focus:outline-none focus:shadow-[0_0_0_2px] focus:shadow-white/10",
+                      "rv-block rv-w-5 rv-h-5 rv-bg-white rv-shadow-[0_2px_2px] rv-shadow-black rv-rounded-[10px] hover:rv-bg-white focus:rv-outline-none focus:rv-shadow-[0_0_0_2px] focus:rv-shadow-white/10",
                       classNames?.volumeSlider?.thumb
                     )}
                     aria-label="Volume"
@@ -321,16 +321,16 @@ function Video({
               ease: "easeInOut",
             }}
             className={cn(
-              "absolute inset-0 xl:mb-0 px-8 gap-8 flex justify-center w-full items-center",
+              "rv-absolute rv-inset-0 xl:rv-mb-0 rv-px-8 rv-gap-8 rv-flex rv-justify-center rv-w-full rv-items-center",
               classNames?.centerWrapper,
               {
-                "mb-8": Boolean(title || subtitle),
+                "rv-mb-8": Boolean(title || subtitle),
               }
             )}
           >
             <IfElse
-              className="flex justify-center z-50"
-              fallbackClassName="flex justify-center z-50"
+              className="rv-flex rv-justify-center rv-z-50"
+              fallbackClassName="rv-flex rv-justify-center rv-z-50"
               fallback={
                 <div className="">
                   <_icons.loading />
@@ -380,17 +380,17 @@ function Video({
               ease: "easeInOut",
             }}
             className={cn(
-              "absolute inset-0 flex flex-col justify-end px-6 xl:px-8 gap-2 lg:gap-3 py-4 xl:py-6 bottom-0",
+              "rv-absolute rv-inset-0 rv-flex rv-flex-col rv-justify-end rv-px-6 xl:rv-px-8 rv-gap-2 lg:rv-gap-3 rv-py-4 xl:rv-py-6 rv-bottom-0",
               classNames?.bottomWrapper
             )}
           >
-            <div className="w-full flex justify-between items-center gap-21">
+            <div className="rv-w-full rv-flex rv-justify-between rv-items-center rv-gap-21">
               <If condition={Boolean(title || subtitle)}>
-                <div className="flex flex-col">
+                <div className="rv-flex rv-flex-col">
                   <If condition={Boolean(subtitle)}>
                     <p
                       className={cn(
-                        "text-[0.5rem] xl:text-base my-0 text-white/80",
+                        "rv-text-[0.5rem] xl:rv-text-base rv-my-0 rv-text-white/80",
                         classNames?.subtitle
                       )}
                     >
@@ -400,7 +400,7 @@ function Video({
                   <If condition={Boolean(title)}>
                     <h2
                       className={cn(
-                        "text-[1rem] xl:text-2xl my-0 font-semibold text-white",
+                        "rv-text-[1rem] xl:rv-text-2xl rv-my-0 rv-font-semibold rv-text-white",
                         classNames?.title
                       )}
                     >
@@ -412,7 +412,7 @@ function Video({
             </div>
             <RadixSlider.Root
               className={cn(
-                "relative flex items-center select-nones touch-none w-full",
+                "rv-relative rv-flex rv-items-center rv-select-nones rv-touch-none rv-w-full",
                 classNames?.playbackRateSlider?.root
               )}
               onValueChange={(value) => {
@@ -425,14 +425,14 @@ function Video({
             >
               <RadixSlider.Track
                 className={cn(
-                  "bg-white backdrop-filter overflow-hidden backdrop-blur-sm h-2 lg:h-3 bg-opacity-20 relative grow rounded-full",
+                  "rv-bg-white rv-backdrop-filter rv-overflow-hidden backdrop-blur-sm rv-h-2 lg:rv-h-3 rv-bg-opacity-20 rv-relative rv-grow rv-rounded-full",
                   classNames?.playbackRateSlider?.track
                 )}
               >
                 <RadixSlider.Range
                   className={cn(
-                    "absolute bg-white h-full",
-                    hideSliderThumb ? "rounded-full" : "rounded-none",
+                    "rv-absolute rv-bg-white rv-h-full",
+                    hideSliderThumb ? "rv-rounded-full" : "rv-rounded-none",
                     classNames?.playbackRateSlider?.range
                   )}
                 />
@@ -440,16 +440,18 @@ function Video({
               <If condition={!hideSliderThumb}>
                 <RadixSlider.Thumb
                   className={cn(
-                    "block w-3 h-3 lg:w-6 lg:h-6 bg-white rounded-full hover:bg-white focus:outline-none focus:shadow-[0_0_0_2px] focus:shadow-white",
+                    "rv-block rv-w-3 rv-h-3 lg:rv-w-6 lg:rv-h-6 rv-bg-white rv-rounded-full hover:rv-bg-white focus:rv-outline-none focus:rv-shadow-[0_0_0_2px] focus:rv-shadow-white",
                     classNames?.playbackRateSlider?.thumb
                   )}
                   aria-label="Volume"
                 />
               </If>
             </RadixSlider.Root>
-            <div className="flex justify-between items-center w-full h-2 xl:h-4">
-              <p className="text-xs text-white">{formatTime(currentTime)}</p>
-              <p className="text-xs text-white">
+            <div className="rv-flex rv-justify-between rv-items-center rv-w-full rv-h-2 xl:rv-h-4">
+              <p className="rv-text-xs rv-text-white">
+                {formatTime(currentTime)}
+              </p>
+              <p className="rv-text-xs rv-text-white">
                 {formatTime(remainingTime, true)}
               </p>
             </div>

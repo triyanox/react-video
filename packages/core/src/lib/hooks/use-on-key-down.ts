@@ -4,6 +4,8 @@ const useOnKeyDown = (key: string, callback: () => void) => {
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === key) {
+        event.preventDefault();
+        event.stopPropagation();
         callback();
       }
     };
