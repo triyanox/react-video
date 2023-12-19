@@ -1,3 +1,8 @@
+/**
+ * `framer-motion` typescript definitions are not up to date.
+ *  So, I have to use `@ts-ignore` to ignore the errors.
+ * I will remove it once the definitions are up to date.
+ */
 import { cn } from "@/lib/utils";
 import { ButtonProps } from "@/types/button.types";
 import { motion } from "framer-motion";
@@ -23,6 +28,7 @@ function Button({
   };
 
   return (
+    // @ts-ignore
     <motion.button
       onClick={handleClick}
       className={cn(

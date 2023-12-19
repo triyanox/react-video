@@ -1,3 +1,8 @@
+/**
+ * `framer-motion` typescript definitions are not up to date.
+ *  So, I have to use `@ts-ignore` to ignore the errors.
+ * I will remove it once the definitions are up to date.
+ */
 import { cn } from "@/lib/utils";
 import * as RadixSlider from "@radix-ui/react-slider";
 import { AnimatePresence, motion } from "framer-motion";
@@ -142,13 +147,6 @@ function Video({
         className,
         classNames?.base
       )}
-      onDoubleClick={() => {
-        if (isFullscreen) {
-          handleExitFullScreen();
-        } else {
-          handleFullScreen();
-        }
-      }}
     >
       <video
         crossOrigin="anonymous"
@@ -174,7 +172,9 @@ function Video({
           pointerEvents: "none",
         }}
       ></video>
+      {/* @ts-ignore */}
       <AnimatePresence>
+        {/* @ts-ignore */}
         <motion.div
           key={JSON.stringify(show)}
           initial={{ opacity: 0 }}
@@ -193,8 +193,10 @@ function Video({
           )}
         />
       </AnimatePresence>
+      {/* @ts-ignore */}
       <AnimatePresence>
         {show && (
+          // @ts-ignore
           <motion.div
             key={JSON.stringify(show)}
             initial={{ opacity: 0 }}
@@ -303,8 +305,10 @@ function Video({
           </motion.div>
         )}
       </AnimatePresence>
+      {/* @ts-ignore */}
       <AnimatePresence>
         {show && (
+          //@ts-ignore
           <motion.div
             key={JSON.stringify(show)}
             initial={{ opacity: 0 }}
@@ -360,8 +364,10 @@ function Video({
           </motion.div>
         )}
       </AnimatePresence>
+      {/* @ts-ignore */}
       <AnimatePresence>
         {show && (
+          // @ts-ignore
           <motion.div
             key={JSON.stringify(show)}
             initial={{ opacity: 0 }}

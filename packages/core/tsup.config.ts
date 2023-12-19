@@ -8,8 +8,8 @@ export default defineConfig((options: Options) => ({
   format: ["cjs", "esm"],
   dts: true,
   clean: true,
-  external: ["react"],
   minify: true,
+  external: ["react", "react-dom", "framer-motion"],
   injectStyle: true,
   ...options,
 }));
