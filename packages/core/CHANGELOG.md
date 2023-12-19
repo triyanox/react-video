@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.6
+
+### Patch Changes
+
+- 8f767c9: Add tailwind prefix to avoid classNames conflicts
+
 ## 0.1.5
 
 ### Patch Changes
