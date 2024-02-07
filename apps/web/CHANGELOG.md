@@ -1,5 +1,12 @@
 # web
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [8a3951e]
+  - @triyanox/react-video@0.1.8
+
 ## 0.0.8
 
 ### Patch Changes

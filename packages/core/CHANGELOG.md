@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.8
+
+### Patch Changes
+
+- 8a3951e: Update dependencies and fix the aspect ration on the root wrapper
+
 ## 0.1.7
 
 ### Patch Changes
