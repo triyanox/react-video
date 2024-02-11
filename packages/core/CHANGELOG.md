@@ -1,5 +1,11 @@
 # @triyanox/react-video
 
+## 0.1.9
+
+### Patch Changes
+
+- a718971: Add missing prefixes
+
 ## 0.1.8
 
 ### Patch Changes
