@@ -141,7 +141,7 @@ function Video({
   return (
     <div
       ref={wrapperRef}
-      className={cn('relative aspect-video', className, classNames?.base)}
+      className={cn('rv-relative rv-aspect-video', className, classNames?.base)}
     >
       <video
         crossOrigin="anonymous"
@@ -151,10 +151,10 @@ function Video({
         loop={loop}
         className={cn(
           {
-            'rounded-xl': !isFullscreen,
+            'rv-rounded-xl': !isFullscreen,
           },
           {
-            'h-full w-full': FullScreen,
+            'rv-h-full rv-w-full': FullScreen,
           },
           classNames?.video,
         )}
